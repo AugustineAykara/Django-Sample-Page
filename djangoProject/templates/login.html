@@ -15,7 +15,11 @@
     <div class="form-style-10">
         <h1>LogIn</h1>
         
-        <form action="register" method="POST">
+        {% for message in messages %}
+        <h2> {{message}} </h2>
+        {% endfor %}
+
+        <form action="login" method="POST">
 
             {% csrf_token %}
 
@@ -26,7 +30,7 @@
             </div>
 
             <div class="button-section">
-                <input type="submit" name="Login" value="LogIn" />
+                <input type="submit" name="login" value="LogIn" />
             </div>
 
         </form>
