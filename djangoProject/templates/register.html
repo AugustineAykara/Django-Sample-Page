@@ -14,7 +14,11 @@
 <body>
     <div class="form-style-10">
         <h1>Sign Up Now!<span>Sign up and tell us what you think of the site!</span></h1>
-      
+
+        {% for message in messages %}
+        <h2> {{message}} </h2>
+        {% endfor %}
+        
         <form action="register" method="POST">
 
             {% csrf_token %}
